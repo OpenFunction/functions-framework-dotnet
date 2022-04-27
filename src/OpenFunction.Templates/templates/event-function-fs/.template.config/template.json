@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "OpenFunction",
+  "classifications": [ "OpenFunction" ],
+  "identity": "OpenFunction.Templates.CloudEventFunction.FSharp",
+  "groupIdentity": "OpenFunction.CloudEventFunction",
+  "name": "OpenFunction CloudEvent Function",
+  "description": "A project template for creating an OpenFunction to respond to a specific CloudEvent type.",
+  "shortName": "of-event",
+  "sourceName": "MyFunction",
+  "defaultName": "CloudEventFunction",
+  "tags": {
+    "language": "F#",
+    "type": "project"
+  },
+  "preferNameDirectory": true
+}

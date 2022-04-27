@@ -32,12 +32,12 @@ generate() {
   cd ..
 }
 
-generate Google.Cloud.Functions.Examples.SimpleHttpFunction gcf-http 'c#'
-generate Google.Cloud.Functions.Examples.SimpleEventFunction gcf-event 'c#'
-generate Google.Cloud.Functions.Examples.SimpleUntypedEventFunction gcf-untyped-event 'c#'
-generate Google.Cloud.Functions.Examples.FSharpHttpFunction gcf-http 'f#'
-generate Google.Cloud.Functions.Examples.FSharpEventFunction gcf-event 'f#'
-generate Google.Cloud.Functions.Examples.FSharpUntypedEventFunction gcf-untyped-event 'f#'
-generate Google.Cloud.Functions.Examples.VbHttpFunction gcf-http 'vb'
-generate Google.Cloud.Functions.Examples.VbEventFunction gcf-event 'vb'
-generate Google.Cloud.Functions.Examples.VbUntypedEventFunction gcf-untyped-event 'vb'
+generate OpenFunction.Examples.SimpleHttpFunction of-http 'c#'
+generate OpenFunction.Examples.SimpleEventFunction of-event 'c#'
+generate OpenFunction.Examples.SimpleUntypedEventFunction of-untyped-event 'c#'
+generate OpenFunction.Examples.FSharpHttpFunction of-http 'f#'
+generate OpenFunction.Examples.FSharpEventFunction of-event 'f#'
+generate OpenFunction.Examples.FSharpUntypedEventFunction of-untyped-event 'f#'
+generate OpenFunction.Examples.VbHttpFunction of-http 'vb'
+generate OpenFunction.Examples.VbEventFunction of-event 'vb'
+generate OpenFunction.Examples.VbUntypedEventFunction of-untyped-event 'vb'
