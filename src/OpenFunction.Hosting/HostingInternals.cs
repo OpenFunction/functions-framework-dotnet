@@ -21,6 +21,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+ 
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,6 +63,9 @@ namespace OpenFunction.Hosting
             {
                 ValidateStartupClasses(app);
             }
+
+            app.UseCloudEvents();
+
             var configurers = app.ApplicationServices.GetServices<FunctionsStartup>();
             foreach (var configurer in configurers)
             {
@@ -70,6 +74,7 @@ namespace OpenFunction.Hosting
 
             app.Map("/robots.txt", ReturnNotFound);
             app.Map("/favicon.ico", ReturnNotFound);
+
             app.Run(Execute);
 
             // Slight hack using dependency injection to propagate the original function from ConfigureFunctionsFrameworkTarget
@@ -116,7 +121,8 @@ namespace OpenFunction.Hosting
             builder.ConfigureAppConfiguration(startup.ConfigureAppConfiguration);
             builder.ConfigureLogging(startup.ConfigureLogging);
             builder.ConfigureServices(startup.ConfigureServices);
-
+            // add dapr client 
+            builder.ConfigureServices(services => services.AddDaprClient());
             // Remember the startup for application configuration time as well.
             builder.ConfigureServices(services => services.AddSingleton(startup));
             return builder;

@@ -13,5 +13,6 @@
     <PackageReference Include="CloudNative.CloudEvents.SystemTextJson" Version="2.2.0" />
     <ProjectReference Include="..\OpenFunction.Framework\OpenFunction.Framework.csproj" />
     <PackageReference Update="Microsoft.SourceLink.GitHub" Version="1.1.1" />
+	<PackageReference Include="Dapr.AspNetCore" Version="1.6.0" />
   </ItemGroup>
 </Project>
